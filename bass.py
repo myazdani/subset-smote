@@ -57,10 +57,11 @@ class SubsetSMOTE(SMOTE):
             - If None, then synth_features is the remaining features after removing fixed_features.
             
         max_samples : float (default 1.0)
-            Number of stratified samples to draw from X.
+            Number of stratified samples to draw from X. This is if you want to under-sample the data at 
+            random first (to prevent getting data to be too big). Useful for creating bagged ensembles.
             
         **kwargs:
-            Additional parameters for SMOTE/ADASYN
+            Additional parameters for SMOTE
         
         Example
         -------
