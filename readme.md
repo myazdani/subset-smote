@@ -63,6 +63,8 @@ bagged_subset_smote.fit(X_unbalanced, y_unbalanced)
 y_pred = bagged_subset_smote.predict(X_test)
 ```                                                 
 
+See the doc strings for more info. 
+
 ## Installation
 
 Download this `bass.py` to your working directory and import from there. Yay friction. 

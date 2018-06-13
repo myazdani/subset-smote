@@ -311,11 +311,17 @@ RandomUnderSampler # doctest: +NORMALIZE_WHITESPACE
             return safe_indexing(X, indices), safe_indexing(y, indices)
 
 class SyntheticBaggingClassifier(BaggingClassifier):
-    """A Bagging classifier with additional balancing.
+    """A Bagging classifier with additional balancing using SMOTE or SubsetSMOTE.
     This implementation of Bagging is similar to the scikit-learn
     implementation. It includes an additional step to balance the training set
-    at fit time using a ``RandomUnderSampler``.
+    at fit time using a ``RandomSampler`` followed by ``SMOTE`` or ``SubsetSMOTE``
     Read more in the :ref:`User Guide <ensemble_meta_estimators>`.
+    
+    
+    TODO:
+    -----
+    Add more details about the relevant params.
+    
     Parameters
     ----------
     base_estimator : object or None, optional (default=None)
